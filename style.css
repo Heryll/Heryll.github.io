@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;500;700&family=Cormorant+Infant:wght@300;500;600&family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.container {
+  width: 650px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.profile {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  background-color: #35e49d;
+  padding: 25px 15px;
+  box-shadow: 2px 1px 9px 11px rgba(0, 0, 0, 0.65);
+  -webkit-box-shadow: 2px 1px 9px 11px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 2px 1px 9px 11px rgba(0, 0, 0, 0.65);
+
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.photo {
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.nama {
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.role {
+  font-size: 1.4em;
+  font-weight: 400;
+}
+.about {
+  font-size: 18px;
+  margin: 10px 15px;
+}
+.link img {
+  height: 40px;
+  width: 40px;
+  margin: 0px 15px;
+  border-radius: 100%;
+}
+.link a {
+  text-decoration: none;
+}
+.kontak {
+  border-radius: 20px;
+  border: none;
+  padding: 8px 15px;
+  background-color: #e61515;
+  color: beige;
+  margin-top: 18px;
+  cursor: pointer;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.background {
+  background-image: url("asset/bg_image.gif");
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+}
