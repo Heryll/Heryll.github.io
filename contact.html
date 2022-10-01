@@ -19,9 +19,20 @@
         <div class="profile2">
           <div class="contactme">Contact Me</div>
           <div class="please mb-4">Please leave your massege here!</div>
-
+          <div
+            class="alert alert-primary alert-dismissible my-alert fade show d-none"
+            role="alert"
+          >
+            <strong>Thank You! </strong> Your Massage has been received
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
           <div class="form">
-            <form>
+            <form name="contact-form">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label"
                   >Email address</label
@@ -31,6 +42,7 @@
                   class="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
+                  name="email"
                 />
               </div>
               <div class="mb-3">
@@ -41,6 +53,7 @@
                   type="password"
                   class="form-control"
                   id="exampleInputPassword1"
+                  name="nama"
                 />
               </div>
               <div class="form-floating mb-3">
@@ -49,10 +62,25 @@
                   placeholder="Leave a comment here"
                   id="floatingTextarea2"
                   style="height: 100px"
+                  name="pesan"
                 ></textarea>
                 <label for="floatingTextarea2">Comments</label>
               </div>
-              <button type="submit" class="btn mt-15px mb-3">Submit</button>
+              <button type="submit" class="btn btn-kirim mt-15px mb-3">
+                Submit
+              </button>
+              <button
+                class="btn btn-loading mt-15px mb-3 d-none"
+                type="button"
+                disabled
+              >
+                <span
+                  class="spinner-border spinner-border-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+                Loading...
+              </button>
             </form>
             <footer class="text-center mb-0">
               Created With Love by
@@ -62,6 +90,30 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxJ7YxHO9opPHKgoUur8b22Hx6F6HgHzL7Z83tOfnXm92YcvH-Dgj07_x2_2HdWZGFc6w/exec"
+      const form = document.forms["contact-form"]
+      const BtnKirim = document.querySelector(".btn-kirim")
+      const BtnLoading = document.querySelector(".btn-loading")
+      const myAlert = document.querySelector(".my-alert")
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault()
+        BtnLoading.classList.toggle("d-none")
+        BtnKirim.classList.toggle("d-none")
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            BtnLoading.classList.toggle("d-none")
+            BtnKirim.classList.toggle("d-none")
+            myAlert.classList.toggle("d-none")
+            form.reset()
+            console.log("Success!", response)
+          })
+          .catch((error) => console.error("Error!", error.message))
+      })
+    </script>
 
     <script>
       function insta() {
