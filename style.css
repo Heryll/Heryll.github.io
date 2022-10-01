@@ -21,7 +21,6 @@
 }
 .profile {
   border-radius: 20px;
-  display: flex;
   flex-direction: column;
   height: auto;
   align-items: center;
