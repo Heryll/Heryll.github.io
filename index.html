@@ -18,20 +18,20 @@
       <div class="container">
         <div class="profile">
           <img
-            class="photo"
-            src="asset/avatar.jpg"
+            class="photo bg-light"
+            src="asset/avatar.png"
             alt="turu"
             height="100"
             width="100"
           />
-          <div class="nama">Hryll</div>
+          <div class="nama">Rhafa</div>
           <div class="role">Student/Junior Programming</div>
           <div class="about">
-            Hallo for everyone who found this, I created this website to
-            challenge myself and make place to put my portofolio. You can call
-            me Heryll, I am a senior high school student from Bekasi and still
-            new in web programming, please give me your advice and through the
-            contact below it will be very helpful, Thank you!
+            Hallo for everyone , I created this website to challenge myself and
+            make place to put my project. You can call me Rhafa, I am a senior
+            high school student from Bekasi and still new in web programming,
+            please give me your advice and through the contact below it will be
+            very helpful, Thank you!
           </div>
           <div class="link">
             <a href="https://www.instagram.com/rfaa.fr/"
@@ -44,14 +44,25 @@
               ><img src="asset/mail.png" alt=""
             /></a>
           </div>
-          <div id="btn-position">
-            <button class="btnstyle btn-danger" onclick="callme()">
-              Contact me
-            </button>
-            <button class="btnstyle btn-danger" onclick="porto()">
-              My Project
-            </button>
-          </div>
+          <table class="mb-3">
+            <tr>
+              <td>
+                <button class="btnstyle btn-danger" onclick="callme()">
+                  Contact me
+                </button>
+              </td>
+              <td class="btn-space">SPACE</td>
+              <td>
+                <button class="btnstyle btn-danger" onclick="porto()">
+                  My Portofolio
+                </button>
+              </td>
+            </tr>
+          </table>
+          <footer>
+            Created With Love by
+            <button class="btn-f fw-bold" onclick="insta()">Rhafa</button>
+          </footer>
         </div>
       </div>
     </div>
@@ -66,6 +77,12 @@
       function porto() {
         console.log("Openning web ......")
         open("https://heryllportofolio1.harrusama.repl.co/")
+      }
+    </script>
+    <script>
+      function insta() {
+        console.log("Openning Instagram.....")
+        open("https://www.instagram.com/rfaa.fr/")
       }
     </script>
     <script
