@@ -5,9 +5,19 @@
   padding: 0;
   font-family: "Roboto Condensed", sans-serif;
 }
+.background {
+  background-attachment: fixed;
+  background-color: teal;
+  background-position-x: 50%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
 
 .container {
-  width: 650px;
+  width: 50%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -21,10 +31,11 @@
 }
 .profile {
   border-radius: 20px;
+  display: flex;
   flex-direction: column;
   height: auto;
   align-items: center;
-  background-color: #35e49d;
+  background-color: #cfc3c3;
   padding: 25px 15px;
   box-shadow: 2px 1px 9px 11px rgba(0, 0, 0, 0.65);
   -webkit-box-shadow: 2px 1px 9px 11px rgba(0, 0, 0, 0.65);
@@ -53,12 +64,17 @@
 .about {
   font-size: 18px;
   margin: 10px 15px;
+  text-align: center;
 }
 .link img {
   height: 40px;
   width: 40px;
   margin: 0px 15px;
   border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
 }
 .link a {
   text-decoration: none;
@@ -77,27 +93,10 @@
   -o-border-radius: 10px;
 }
 
-#btn-position {
-  display: flex;
-}
-
-.background {
-  background-image: url("asset/bg_image.gif");
-  background-size: contain;
-  background-repeat: repeat;
-  background-attachment: fixed;
-  height: 100%;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
-}
-
 .btn-space {
-  color: #35e49d;
+  color: #cfc3c3;
 }
 .btn-f {
   border: none;
-  background: #35e49d;
+  background: #cfc3c3;
 }
